@@ -20,8 +20,16 @@ class productController{
             res.status(400).json(err)
         })
     }
-    static update(){
-
+    static update(req, res){
+        const{harga_barang} = req.body
+        const {id} = req.params
+        Product.update({harga_barang},{where:{id}})
+        .then(result => {
+            res.status(200).json('berhasil update data produk')
+        })
+        .catch(err => {
+            res.status(400).json(err)
+        })
     }
     static delete(req, res){
         const {id} = req.params
