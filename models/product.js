@@ -1,4 +1,7 @@
 'use strict';
+
+// const userController = require("../controllers/userController");
+
 module.exports = (sequelize, DataTypes) => {
   const {Model} = sequelize.Sequelize
   class Product extends Model{}
@@ -10,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize
   });
-  User.associate = function(models) {
-    // associations can be defined here
-  };
+  Product.associate=function(models){}
+
+  
   return Product;
 };
