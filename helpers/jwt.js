@@ -5,7 +5,8 @@ function generateToken(payload){
 }
 
 function verifyToken(token){
-    return jwt.verify(token, 'ryw4atch')
+    
+    return jwt.verify(token, 'ryw4tch')
 }
 
 module.exports = {

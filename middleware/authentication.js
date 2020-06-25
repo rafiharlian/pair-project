@@ -3,6 +3,7 @@ const { User } = require('../models')
 
 function authentication( req, res, next){
     const decode = verifyToken(req.headers.accesstoken)
+    console.log(decode)
     User.findByPk(decode.id)
         .then( data => {
             if(data){

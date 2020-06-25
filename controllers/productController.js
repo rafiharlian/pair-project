@@ -12,7 +12,8 @@ class productController{
     }
     static create(req,res){
         const{gambar, nama_barang, gender, harga_barang} = req.body
-        Product.create({gambar, nama_barang, gender, harga_barang})
+        const  user_Id = req.user.id
+        Product.create({gambar, nama_barang, gender, harga_barang, user_Id})
         .then(data => {
             res.status(201).json({msg: 'berhasil membuat data produk'})
         })

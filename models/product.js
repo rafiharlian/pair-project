@@ -9,11 +9,14 @@ module.exports = (sequelize, DataTypes) => {
     gambar: DataTypes.STRING,
     nama_barang: DataTypes.STRING,
     gender: DataTypes.STRING,
-    harga_barang: DataTypes.STRING
+    harga_barang: DataTypes.STRING,
+    user_Id: DataTypes.INTEGER
   }, {
-    sequelize
+    sequelize, modelName: "Product"
   });
-  Product.associate=function(models){}
+  Product.associate=function(models){
+    Product.hasMany(models.Cart)
+  }
 
   
   return Product;

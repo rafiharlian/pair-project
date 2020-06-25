@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "sotosedep",
-    "password": "sotosedep",
+    "username": "kipli",
+    "password": "kipli",
     "database": "db-toko-online",
     "host": "localhost",
     "dialect": "postgres",
