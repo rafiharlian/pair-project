@@ -4,7 +4,8 @@ class productController{
     static read(req, res){
         Product.findAll()
         .then(result => {
-            res.status(200).json({data : result})
+            console.log(result)
+            res.render('home', {result})
         })
         .catch(err => {
             res.status(400).json(err)

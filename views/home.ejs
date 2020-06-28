@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYwatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link href="/css/mystyle.css" rel="stylesheet">
+    <link href="/login">
+</head>
+<body>
+    <div class="ui menu">
+        <a class="item">About</a>
+        
+        <div class="right menu">
+            <div class="ui input">
+                <input type="text" placeholder="Search...">
+              </div>
+              <button class="ui button">Search</button>
+              <div class="ui vertical animated button" tabindex="0">
+                <div class="hidden content">Shop</div>
+                <div class="visible content">
+                  <i class="shop icon"></i>
+                </div>
+              </div>
+          <a class="item" href="/login">Sign In</a>
+          <a class="item" href="/register">Sign Up</a>
+        </div>
+      </div>
+
+      <div class="bg">
+             <h2 class="title ry" style="font-size: 100px; font-weight: normal; color: rgba(230, 228, 224, 0.459);" >RY.Watch</h2> 
+      </div>
+      <div class="container-navigation">
+        <div class="navigation">
+            <div class="one">
+              <a href="/men" target="blank">
+                <h3>Men</h3>
+              </a>
+            </div>
+            <div class="two">
+              <a href="" target="blank">
+                <h3>Ladies</h3>
+              </a>
+            </div>
+            <div class="three">
+              <a href="" target="blank">
+                <h3>Couple</h3>
+              </a>  
+            </div>
+            <div class="four">
+              <a href="" target="blank">
+                <h3>Strap</h3>
+              </a>  
+            </div>
+        </div>
+    </div>
+    <div class="container-banner">
+      <a href="https://www.gshock.com/" target="blank">
+        <img src="/images/g-shock.jpg">
+      </a>
+    </div>
+    <div class="iklan">
+      <a href="" target="blank">
+        <img src="/images/iklan-bca.jpg">
+      </a>
+    </div>
+    <div class="container-keterangan">
+      <p>New arrival</p>
+    </div>
+      <div class="container-product">
+        <% result.forEach(el => { %>
+        <div class="box-product">
+          <div class="up">
+            <img src="<%= el.dataValues.gambar %>">
+          </div>
+          <div class="down">
+            <div>
+              <p><%= el.dataValues.nama_barang %></p>
+              <p style="margin-bottom: 20px;"><%= el.dataValues.harga_barang %></p>
+            </div>
+            
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <div class="iklan">
+        <a href="" target="blank">
+          <img src="/images/iklan-lain.jpg">
+        </a>
+      </div>
+      <div class="container-keterangan">
+        <p>Straps</p>
+      </div>
+      <div class="container-product">
+        <% result.forEach(el => { %>
+        <div class="box-product">
+          <div class="up">
+            <img src="<%= el.dataValues.gambar %>">
+          </div>
+          <div class="down">
+            <p>produk antariksa</p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <div class="container-layananup">
+        <p style="font-family: 'font1'; font-size: 25px;">layanan</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita vitae unde quidem eligendi reprehenderit beatae adipisci nisi accusantium sunt molestiae. Corrupti dolor, praesentium earum tempora aut perferendis nisi illo blanditiis!</p>
+      </div>
+      <div class="container-layanan"> 
+        <div class="layanan-box"> 
+          <img src="/images/original.png">
+          <a href="" target="blank">
+            <p>Jaminan Original</p>
+          </a>
+        </div>   
+        <div class="layanan-box"> 
+          <img src="/images/shipping.png">
+          <a href="" target="blank">
+            <p>Gratis Ongkir</p>
+          </a>
+        </div>
+        <div class="layanan-box"> 
+          <img src="/images/garansi.png">
+          <a href="" target="blank">
+            <p>Garansi</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-footer-big">
+        <div class="footer-big">
+            <div class="one">
+                <div class="up">
+                  
+                    <h1 class="title">RYwatch</h1>
+                </div>
+                <div class="down">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, ratione accusamus deleniti nihil dolorem consequatur neque porro repudiandae nulla consequuntur.</p>
+                    <br>
+                    <h4>Jl. Durian utara no 45, Banyumanik, Semarang</h4>
+                    <h4>081 123 456 789</h4>
+                    <h4>RYwatch@gmail.com</h4>
+                </div>
+            </div>
+            <div class="two"></div>
+            <div class="three">
+                <h1 class="title"></h1>
+                <a href="https://www.facebook.com/" target="blank_">
+                  <img src="/images/facebook.png">
+                </a>
+                <a href="https://www.pornhub.com/" target="blank_">
+                  <img src="/images/whatsapp.png">
+                </a>
+                <br>
+                <a href="https://www.instagram.com/" target="blank_">
+                  <img src="/images/instagram.png">
+                </a>
+                <a href="https://twitter.com/" target="blank_">
+                  <img src="/images/twitter.png">
+                </a>
+            </div>
+            <div class="four">
+                <h1 class="title">Download Apps</h1>
+                <a href="https://www.apple.com/shop" target="blank_">
+                  <img src="/images/apple.png">
+                </a>
+                <a href="https://play.google.com/store?hl=en" target="blank_">
+                  <img src="/images/google.png">
+                </a>
+            </div>
+        </div>
+    </div>
+      
+       
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</body>
+</html>
