@@ -6,30 +6,130 @@
     <title>men</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link href="/css/menstyle.css" rel="stylesheet">
+    <link href="/css/mystyle.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container-men">
-        <div class="container-men-judul">
-            <p>Product Men</p>
+    <div class="ui menu">
+        
+        
+        <div class="right menu">
+            <div class="ui input">
+                <input type="text" placeholder="Search...">
+              </div>
+              <button class="ui button">Search</button>
+              <div class="ui vertical animated button" tabindex="0">
+                <div class="hidden content">Shop</div>
+                <div class="visible content">
+                  <i class="shop icon"></i>
+                </div>
+              </div>
+          <a class="item" href="/login" target="blank">Sign In</a>
+          <a class="item" href="/register" target="blank">Sign Up</a>
         </div>
-        <div class="container-men-up">
-            <div class="satu">
-                <button>Tambah ke trolli</button>
+      </div>
+
+      <div class="bg">
+        <a href="/">
+            <h2 class="title ry" style="font-size: 100px; font-weight: normal; color: rgba(230, 228, 224, 0.459);" >RY.Watch</h2> 
+        </a>
+      </div>
+      <div class="container-navigation">
+        <div class="navigation">
+            <div class="one">
+              <a href="/men/menproduct">
+                <h3>Men</h3>
+              </a>
             </div>
-            <div class="dua">
-                <button>Tambah ke trolli</button>
+            <div class="two">
+              <a href="" target="blank">
+                <h3>Ladies</h3>
+              </a>
             </div>
-            <div class="tiga">
-                <button>Tambah ke trolli</button>
+            <div class="three">
+              <a href="" target="blank">
+                <h3>Couple</h3>
+              </a>  
             </div>
-            <div class="empat">
-                <button>Tambah ke trolli</button>
-            </div>
-            <div class="lima">
-                <button>Tambah ke trolli</button>
+            <div class="four">
+              <a href="" target="blank">
+                <h3>Strap</h3>
+              </a>  
             </div>
         </div>
     </div>
+
+    <div class="container-keterangan">
+        <p>Men Product</p>
+      </div>
+        <div class="container-product">
+          <% result.forEach(el => { %>
+            <div class="ui card" >
+                <div class="image" >
+                  <img src="<%= el.dataValues.gambar %>">
+                </div>
+                <div class="content" style="background-color: rgb(216, 216, 194);">
+                  <a class="header"><%= el.dataValues.nama_barang %></a>
+                  <div class="meta">
+                    <span class="date"></span>
+                  </div>
+                  <div class="description">
+                    <%= el.dataValues.harga_barang %>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="cart arrow down icon"></i>>
+                    Tambah ke trolli
+                  </a>
+                </div>
+              </div>
+          <% }) %>
+        </div>
+        <div class="container-footer-big">
+            <div class="footer-big">
+                <div class="one">
+                    <div class="up">
+                      
+                        <h1 class="title">RYwatch</h1>
+                    </div>
+                    <div class="down">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, ratione accusamus deleniti nihil dolorem consequatur neque porro repudiandae nulla consequuntur.</p>
+                        <br>
+                        <h4>Jl. Durian utara no 45, Banyumanik, Semarang</h4>
+                        <h4>081 123 456 789</h4>
+                        <h4>RYwatch@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="two"></div>
+                <div class="three">
+                    <h1 class="title"></h1>
+                    <a href="https://www.facebook.com/" target="blank_">
+                      <img src="/images/facebook.png">
+                    </a>
+                    <a href="https://www.pornhub.com/" target="blank_">
+                      <img src="/images/whatsapp.png">
+                    </a>
+                    <br>
+                    <a href="https://www.instagram.com/" target="blank_">
+                      <img src="/images/instagram.png">
+                    </a>
+                    <a href="https://twitter.com/" target="blank_">
+                      <img src="/images/twitter.png">
+                    </a>
+                </div>
+                <div class="four">
+                    <h1 class="title">Download Apps</h1>
+                    <a href="https://www.apple.com/shop" target="blank_">
+                      <img src="/images/apple.png">
+                    </a>
+                    <a href="https://play.google.com/store?hl=en" target="blank_">
+                      <img src="/images/google.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
    
       
        
