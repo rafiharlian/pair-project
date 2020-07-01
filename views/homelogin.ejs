@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYwatch</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link href="/css/mystyle.css" rel="stylesheet">
+    <link href="/css/homelogin.css" rel="stylesheet">
     <link href="/login">
 </head>
 <body>
@@ -22,8 +22,8 @@
                   <i class="shop icon"></i>
                 </div>
               </div>
-          <a class="item" href="/login" target="blank">Sign In</a>
-          <a class="item" href="/register" target="blank">Sign Up</a>
+          <a class="item" href="" target="blank">nama</a>
+          <a class="item" href="/home" target="blank" style="color: yellow;">log out</a>
         </div>
       </div>
 
@@ -38,9 +38,9 @@
               </a>
             </div>
             <div class="two">
-              <a href="/ladies/ladiesproduct">
-                <h3>Ladies</h3>
-            </a>
+                <a href="/ladies/ladiesproduct">
+                    <h3>Ladies</h3>
+                </a>
             </div>
             <div class="three">
               <a href="" target="blank">
@@ -98,10 +98,7 @@
             <img src="<%= el.dataValues.gambar %>">
           </div>
           <div class="down">
-            <div>
-              <p><%= el.dataValues.nama_barang %></p>
-              <p style="margin-bottom: 20px;"><%= el.dataValues.harga_barang %></p>
-            </div>
+            <p>produk antariksa</p>
           </div>
         </div>
         <% }) %>

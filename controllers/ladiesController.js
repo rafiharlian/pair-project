@@ -1,19 +1,19 @@
 const { Product } = require('../models')
 
-class menController{
-    static menpage(req, res){
-        res.render('men')
+class ladiesController{
+    static ladiespage(req, res){
+        res.render('ladies')
         
     }
-    static menread(req, res){
+    static ladiesread(req, res){
         Product.findAll({
             where: {
-              gender: 'Pria'
+              gender: 'Wanita'
             }
           })
         .then(result => {
             
-            res.render('men', {result})
+            res.render('ladies', {result})
         })
         .catch(err => {
             res.status(400).json(err)
@@ -21,4 +21,4 @@ class menController{
     }
 }
 
-module.exports = menController
+module.exports = ladiesController
